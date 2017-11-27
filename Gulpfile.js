@@ -1,7 +1,7 @@
 // Load all needed modules
 var gulp = require('gulp'),
     copy = require('gulp-copy'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),

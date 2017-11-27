@@ -1,0 +1,6 @@
+@mixin fixed {
+   -webkit-background-size: fixed;
+  -moz-background-size: fixed;
+  -o-background-size: fixed;
+  background-size: fixed;
+}

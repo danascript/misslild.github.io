@@ -1,0 +1,24 @@
+/*!
+ * You can override all Bootstrap variables in this file.
+ *
+ * If you want to know all available variables, look at:
+ * /node_modules/bootstrap/scss/_variables.scss
+ */
+
+//Colors:
+
+$main-bg-color: rgb(255,255,255);
+$darker-bg-color: darken($main-bg-color, 10%);
+$darkest-bg-color: darken($main-bg-color, 40%);
+
+$nav-bg: rgba(255,255,255,0.4);
+$nav-bg-scroll: rgba(255,255,255,0.97);
+
+//Jumbotron:
+
+$jumbotron-bg:                      rgba(0,0,0,0);
+
+
+//Navbar 
+
+$navbar-light-color:                rgba(73,73,73,0.4);

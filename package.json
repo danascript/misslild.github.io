@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap4-custom-boilerplate",
-  "description": "A custom boilerplate created for Bootstrap 4, using npm and SCSS",
+  "name": "Portfolio webpage of Daniela Fedyakin",
+  "description": "A webpage portfolio to display projects, thoughts and skills",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "devDependencies": {

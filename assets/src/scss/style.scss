@@ -22,10 +22,141 @@ $fa-font-path: "../fonts/";
 
 /* 3. Starter Template
 -------------------------------------------*/
+
+
+/*
+ * Device = Most of the Smartphones Mobiles (Portrait)
+ * Screen = Between 320px to 479px
+ */
+
+@media (max-width: 480px) {
+  body {
+     background-image: url(../../../images/bg_main_3_576px-compressor.jpeg);
+     background-size: cover;
+     background-attachment: fixed;
+  }
+
+  nav, .navbar {
+  	background-color: $nav-bg-scroll;
+  }
+
+  .main {
+     padding: 0;
+     margin-top: -75px;
+
+     .jumbotron {
+       padding-top: 70%;
+       left: 5%;
+       text-shadow: 1px 1px 5px white;
+     }
+  }
+}
+
+/*
+ * Device = Low Resolution Tablets, Mobiles (Landscape)
+ * Screen = Between 481px to 767px
+ */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+     background-image: url(../../../images/bg_main_3_768px-compressor.jpeg);
+     background-size: cover;
+     background-attachment: fixed;
+  }
+  nav, .navbar {
+  	background-color: $nav-bg-scroll;
+  }
+
+  .main {
+     padding: 0;
+     margin-top: -75px;
+
+     .jumbotron {
+       padding-top: 60%;
+       left: 5%;
+       text-shadow: 1px 1px 5px white;
+     }
+  }
+}
+
+/*
+ * Device = Tablets, Ipads (landscape)
+ * Screen = Between 768px to 1024px
+ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+     background-image: url(../../../images/bg_main_3_992px-compressor.jpeg);
+     background-size: cover;
+     background-attachment: fixed;
+  }
+
+  .main {
+     padding: 0;
+     margin-top: -75px;
+
+     .jumbotron {
+       padding-top: 50%;
+       left: 5%;
+       text-shadow: 1px 1px 5px white;
+     }
+  }
+
+  .pre-figure figure img {
+    -webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+  	-webkit-transition: .3s ease-in-out;
+  	transition: .3s ease-in-out;
+  }
+
+  .pre-figure figure:hover img,
+  .pre-figure figure img:focus {
+    -webkit-filter: grayscale(0);
+  	filter: grayscale(0);
+  }
+}
+
+/*
+ * Device = Laptops, Desktops
+ * Screen = 1025px to higher resolution desktops
+ */
+
+@media (min-width: 1025px) {
+  body {
+     background-image: url(../../../images/bg_main_3_1200px-compressor.jpeg);
+     background-size: cover;
+     background-attachment: fixed;
+  }
+
+  .main {
+     padding: 0;
+     margin-top: -75px;
+
+     .jumbotron {
+       padding-top: 40%;
+       left: 5%;
+       text-shadow: 1px 1px 5px white;
+     }
+  }
+
+  .pre-figure figure img {
+    -webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+  	-webkit-transition: .3s ease-in-out;
+  	transition: .3s ease-in-out;
+  }
+
+  .pre-figure figure:hover img,
+  .pre-figure figure img:focus {
+    -webkit-filter: grayscale(0);
+  	filter: grayscale(0);
+  }
+}
+
+
+// GENERAL STYLING RULES:
+
 body {
-   background-image: url(../../../images/bg_main_3.jpeg);
-   background-size: cover;
-   background-attachment: fixed;
    font-family: 'Quicksand', sans-serif;
 }
 
@@ -47,7 +178,7 @@ nav,
   	width: 90%;
   }
 }
-.navbar-light { 
+.navbar-light {
 	.navbar-brand {
 		color: $navbar-light-color;
 	}
@@ -67,16 +198,6 @@ h4 {
    padding-top: 1.4rem;
    font-size: 1.4rem;
 
-}
-
-.main {
-   padding: 0;
-   margin-top: -75px;
-
-   .jumbotron {
-     padding-top: 40%;
-     left: 5%;
-   }
 }
 
 .section {
@@ -199,10 +320,21 @@ h4 {
 form {
    margin: 0 auto;
 
+   .form-control:focus {
+       box-shadow: 0 0 1px 3px white;
+       border-color: #ced4da;
+   }
+
    .btn:hover {
          color: white;
          background-color: grey;
-      }
+         text-shadow: 1px 1px 5px white;
+         box-shadow: 0 0 1px 3px white;
+   }
+
+   .btn:focus {
+     box-shadow: 0 0 1px 3px white;
+   }
 }
 
 
@@ -219,11 +351,16 @@ footer {
       &:hover, &:focus {
          text-decoration: none;
          color: black;
+
       }
    }
 
    .fa {
       font-size: 1.5rem;
+
+      &:hover {
+        text-shadow: 2px 2px 7px grey;
+      }
    }
 }
 
@@ -231,7 +368,7 @@ footer {
 // Animation classes
 
 .hoverIt {
-    box-shadow: 0px 0px 30px #000000;
+    box-shadow: 1px 1px 5px grey;
     z-index: 2;
     transition: all 200ms ease;
     transform: scale(1.05);
@@ -245,6 +382,29 @@ footer {
 }
 
 .scrolled nav {
-   background-color: $nav-bg-scroll; 
+   background-color: $nav-bg-scroll;
    text-shadow: 0 0 3px #ddd;
+}
+
+.pre-figure span {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	z-index: 0;
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	color: rgb(28,86,16);
+	font-size: 1rem;
+	text-decoration: none;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+  text-shadow: 1px 1px 3px grey;
+}
+
+figure:hover+span {
+	bottom: -18px;
+	opacity: 1;
 }
